@@ -19,7 +19,7 @@
 
 
 # Enable debugging for verbose output
-debug=false
+debug=true
 
 # Working directory for the script
 ytdl_root_dir="${HOME}/ytdlrc"
