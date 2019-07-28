@@ -54,6 +54,9 @@ ytdl_write_subtitles=true
 # Write automatically generated subtitle file (YouTube only)
 ytdl_write_automatic_subtitles=true
 
+# Embed subtitle file
+ytdl_embed_subtitles=true
+
 # Download all the available subtitles of the video
 #     * If `false`, only subtitles matching the specified language(s)
 #       in the `ytdl_subtitle_lang` setting will be downloaded
@@ -334,6 +337,11 @@ if [ "$ytdl_write_subtitles" = true ] || [ "$ytdl_write_automatic_subtitles" = t
   # Set `youtube-dl` flags for writing automatic subtitles
   if [ "$ytdl_write_automatic_subtitles" = true ]; then
     ytdl_subtitle_flags="${ytdl_subtitle_flags} --write-auto-sub"
+  fi
+  
+  # Set `youtube-dl` flags for embedding subtitles
+  if [ "$ytdl_embed_subtitles" = true ]; then
+    ytdl_subtitle_flags="${ytdl_subtitle_flags} --embed-subs"
   fi
 
   # Set `youtube-dl` flags for writing all subtitles or only specified languages
