@@ -110,7 +110,7 @@ rclone_config="${HOME}/.config/rclone/rclone.conf"
 rclone_command="move"
 
 # Where to store downloaded files on the rclone remote
-rclone_destination="shoreline:archive/youtube"
+rclone_destination="shoreline:Crunchyroll"
 
 # Rclone flags
 #     * Add any additional rclone flags here, e.g.: "--syslog --bwlimit 5M"
