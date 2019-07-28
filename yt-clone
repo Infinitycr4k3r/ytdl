@@ -59,10 +59,10 @@ ytdl_write_automatic_subtitles=true
 #       in the `ytdl_subtitle_lang` setting will be downloaded
 #     * If `true`, downloading an entire channel may take considerably more
 #       time to process
-ytdl_write_all_subtitles=false
+ytdl_write_all_subtitles=true
 
 # What subtitle format to use
-ytdl_subtitle_format="srt/best"
+ytdl_subtitle_format="ass/best"
 
 # What subtitle languages to download (separated by commas)
 #     * Use `youtube-dl --list-subs` to view available language tags
@@ -107,7 +107,7 @@ rclone_config="${HOME}/.config/rclone/rclone.conf"
 rclone_command="move"
 
 # Where to store downloaded files on the rclone remote
-rclone_destination="remote:archive/youtube"
+rclone_destination="shoreline:archive/youtube"
 
 # Rclone flags
 #     * Add any additional rclone flags here, e.g.: "--syslog --bwlimit 5M"
@@ -115,7 +115,7 @@ rclone_destination="remote:archive/youtube"
 #         * If debug=true, "-vv --stats 1s --progress" is appended to rclone
 #           command
 #         * If debug=false, "-q" is appended to rclone command
-rclone_flags="--transfers 8 --checkers 16 --acd-upload-wait-per-gb 5m"
+rclone_flags="--transfers 8 --checkers 16 --acd-upload-wait-per-gb 1m"
 
 
 # ---------- You probably don't need to edit anything below this ----------
