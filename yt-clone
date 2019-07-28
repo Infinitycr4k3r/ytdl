@@ -118,7 +118,7 @@ rclone_destination="shoreline:Crunchyroll"
 #         * If debug=true, "-vv --stats 1s --progress" is appended to rclone
 #           command
 #         * If debug=false, "-q" is appended to rclone command
-rclone_flags="--transfers 8 --checkers 16 --acd-upload-wait-per-gb 1m"
+rclone_flags="--transfers 8 --checkers 16 --drive-chunk-size 64M --acd-upload-wait-per-gb 1m"
 
 
 # ---------- You probably don't need to edit anything below this ----------
